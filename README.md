@@ -40,3 +40,16 @@ resultado:
 633
 
 - Lista los 10 primeros
+* Sólo muestra: nombre, camas, precio, government_area
+* Ordenados por precio.
+use('listingsAndReviews');
+db.listingsAndReviews.find(
+    {"address.country": "Spain"},
+    {
+        "_id": 0,
+        "price":1, 
+        "name": 1,
+        "beds": 1,
+        "address.government_area":1
+    }
+).sort({"price": -1}).limit(10);
