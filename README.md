@@ -29,8 +29,8 @@ Para esta practica se nos solicita:
 ## Parte Obligatoria
 
 - Saca en una consulta cuántos apartamentos hay en España.
-> use('listingsAndReviews');
-> db.listingsAndReviews.count({"address.country": "Spain"});
-> resultado:
-> 633
+use('listingsAndReviews');
+db.listingsAndReviews.count({"address.country": "Spain"});
+resultado:
+633
 - Lista los 10 primeros
